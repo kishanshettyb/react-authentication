@@ -12,7 +12,7 @@ export default function CategoriesDetails({ navigation }) {
       }}
     >
       <Text>Categories Details</Text>
-      <Button block warning onPress={() => navigation.navigate.goBack()}>
+      <Button block warning onPress={() => navigation.navigate("Home")}>
         <Text>Go to Home page</Text>
       </Button>
     </View>

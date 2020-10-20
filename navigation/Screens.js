@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import AsyncStorage from "@react-native-community/async-storage";
+import Login from "../screens/Login";
+import Signup from "../screens/Signup";
+import { View } from "native-base";
+import { AppLoading } from "expo";
+import { AuthContext } from "../components/Context";
+
+// Screens
 import Onboarding from "../screens/Onboarding";
 import Home from "../screens/Home";
 import HomeDetails from "../screens/HomeDetails";
 import Categories from "../screens/Categories";
 import CategoriesDetails from "../screens/CategoriesDetails";
-import AsyncStorage from "@react-native-community/async-storage";
-import Login from "../screens/Login";
-import Signup from "../screens/Signup";
-import { View, Text } from "native-base";
-import { ActivityIndicator } from "react-native";
-import { AppLoading } from "expo";
-
-import { authContext, AuthContext } from "../components/Context";
 
 const Stack = createStackNavigator();
 
@@ -62,6 +62,7 @@ function OnboardingStack(props) {
 export default function Screens(props) {
   const [isLoading, setIsLoading] = React.useState(true);
   const [userToken, setUserToken] = React.useState(null);
+
   const authContext = React.useMemo(() => ({
     signIn: () => {
       setUserToken("abcd");

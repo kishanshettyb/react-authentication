@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Container,
-  Content,
-  Item,
-  Input,
-  Button,
-} from "native-base";
+import { Text, Container, Content, Item, Input, Button } from "native-base";
 import { StyleSheet } from "react-native";
 import { AuthContext } from "../components/Context";
 

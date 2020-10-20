@@ -3,7 +3,6 @@ import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet } from "react-native";
 import Screens from "./navigation/Screens";
 
 export default class App extends React.Component {
@@ -35,11 +34,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  textCenter: {
-    justifyContent: "center",
-    alignItems: "center",
-    flex: 1,
-  },
-});
